@@ -41,7 +41,7 @@ const $audio = document.getElementById('audio'),
 
 let timerInterval,
     selection = [],
-    timer = 10,
+    timer = 200,
     steps = 0,
     score = 3;
 
