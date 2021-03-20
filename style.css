@@ -7,15 +7,15 @@ html, body {
 }
 
 body {
-    background: #ff9090;
+    background: #f4a261;
     font-weight: bold;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Chango', cursive;
     text-align: center;
     padding: 20px;
 }
 
 button {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Chango', cursive;
 }
 
 ul {
@@ -30,7 +30,7 @@ ul li {
 .game-container {
     display: inline-block;
     margin: 0 auto;
-    background: gold;
+    background: #118ab2;
     padding: 20px;
     border-radius: 18px;
     box-shadow: 10px 10px 0 0 #000000;
@@ -70,9 +70,9 @@ h1 {
 
 #board {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: 100px;
-    grid-auto-rows: 100px;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: 120px;
+    grid-auto-rows: 120px;
     gap: 10px;
     margin: 20px 0 0;
 }
@@ -88,6 +88,8 @@ h1 {
     cursor: pointer;
     transform: rotateY(180deg);
     transition: transform 150ms;
+    outline: none;
+    
 }
 
 #board li img {
@@ -115,7 +117,7 @@ h1 {
     outline: none;
     border-radius: 8px;
     font-size: 27px;
-    background: green;
+    background: #ef476f;
     color: #ffffff;
     padding: 2px 18px;
     border: 3px solid #000000;

@@ -41,7 +41,7 @@ const $audio = document.getElementById('audio'),
 
 let timerInterval,
     selection = [],
-    timer = 120,
+    timer = 10,
     steps = 0,
     score = 3;
 
@@ -66,7 +66,22 @@ const countTime = () => {
 
         if (timer === 0) {
             clearInterval(timerInterval);
+             Swal.fire({
+                title: 'Game Over',
+                showConfirmButton: true,
+                confirmButtonText: 'Play Again',
+                showCancelButton: true,
+                imageUrl: './pics/toni.jpg',
+                imageWidth: 400,
+                imageHeight: 400
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    startGame();
+                }
+            })
+            $start.classList.remove('hide');
         }
+        
     }, 1000);
 }
 
@@ -101,10 +116,14 @@ const checkIfGameOver = () => {
         clearInterval(timerInterval);
         setTimeout(() => {
             Swal.fire({
-                title: 'Game Over',
+                title: 'Winner !',
                 icon: 'success',
                 showConfirmButton: true,
-                confirmButtonText: 'Play Again'
+                confirmButtonText: 'Play Again',
+                showCancelButton: true,
+                imageUrl: './pics/bolt.jpg',
+                imageWidth: 400,
+                imageHeight: 400
             }).then((result) => {
                 if (result.isConfirmed) {
                     startGame();
